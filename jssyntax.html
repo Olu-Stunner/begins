@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*  
+ syntax in Javascript
+ it is case sensitive
+ precision is key to the computer
+ */
+console.log("h1");
+//Variable: a space in the computer memory where we store and retrieve value.
+//1st keyword = let
+//name of variable assigned where we put values called IDENTIFIERS
+//2WAYS TO DECLARE VARIABLES
+//LET & CONST
+// (let x =) is declaration
+// = 7 is assigning value 7
+
+let x = 7;
+x = 2
+x = 6
+let y = 3;
+let z = x + y;
+console.log('Answer: ' + z);
+console.log(z)
+
+//using const
+const k = 9;
+console.log(k);
+
+//Coercion
+let a = 11;
+let b = '19';
+b = parseInt(b)
+c = (a + b);
+console.log('answer: ' + c);
+
+
+//data types
+let e = 1;
+console.log(typeof e);
+
+let r = true;
+console.log(typeof r);
+
+//Operation and Operand
+//OPerations are keywords (=,+,&&)
+//oprands are like identifiers,variable names and functions
+/*in javascript, you write statement each which are excuted sequentially
+the statement are made up of one or more expression and that operations are made up of 
+operations and operands.
+*/
+
+//Expressions
+/*
+types of Expression
+     1. Variable Declaration
+
+        let b;
+
+    2. Assign a Value
+            
+        b = 4;
+*/
+    //Perform an evaluation that returns a single value
+    //b = c
+    
+    let i =3;
+    let j =2;
+    //Three expressions in here..can you find them?
+    let l = i + j;
+
+    // 1. let a.... variable declaration
+    // 2. Perform an evaluation b + c
+    // 3. Result assigned to a 
+
+// CATEGORIES OF OPERATORS
+// ASSIGNMENT =
+// ARITHMETIC + - / *  
+//INCREMENT/ DECREMENT ++ --
+var w = 1;
+console.log(w++) // just assigned
+console.log(++w) // assigned and incremented
+
+// FUNCTION INVOCATION OPERATOR ()
+//console.log ('')
+
+// LOGICAL && ||
+//and &&
+//or ||
+
+// MEMBER ACCESSOR OPERATOR .
+/*console.log() period(.) allows to various members of an object
+allows to access the log function of the console Objectinside javascript.
+*/ 
+
+// code block operators {}
+
+//ARRAY ELEMENT ACCESS OPERATORS []
+
+//ARRAY
+let m = ['john', 28 , true];
+console.log(m)
+ console.log(m.length);
+m[7] = 200
+console.log(m)
+console.log(m.length);
+m.push(22); // to add 22 to the end of the array
+console.log(m)
+console.log(m.length);
+m.pop();  //to delete from the last value of the array
+m.pop();
+m.pop();
+console.log(m)
+console.log(m.length);
+
+let n = [4,8,15,16,23,42]
+for (let x = 0; x < n.length; x++) {
+    const element = n[x];
+    console.log(element);
+}
+
+let o = 1
+while (o < 10) {
+    console.log(o++);
+    
+}function name(params) {
+    
+}
+
+if (condition) {
+    
+} else {
+    
+}
+    
+return
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

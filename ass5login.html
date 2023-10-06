@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #signup-form{
+            background-color: blanchedalmond;
+            border-radius: 5px;
+            box-shadow: cornsilk;
+            width: fit-content;
+            height: auto;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="signup-form">
+        <input type="text" id="first-name" placeholder="First name"><br><br>
+        <input type="text" id="last-name" placeholder="Last name"><br><br>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <input type="password" id="password" placeholder="Password"><br><br>
+        <input type="tel" id="phone-number" placeholder="Phone number"><br><br>
+        <button type="submit">Sign up</button><br><br>
+    </form>
+    <br><br><br><br><br><br>
+
+    <form id="signin-form">
+        <input type="email" id="signin-email" placeholder="Email"><br><br>
+        <input type="password" id="signin-password" placeholder="Password"><br><br>
+        <button type="submit">Sign in</button><br><br>
+    </form>
+    
+    
+</body>
+<script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+    let email = document.getElementById('email').value;
+    let user = users.find((user) => user.email === email);
+    
+    if (user) {
+        alert('User already exists');
+        return;
+    }
+    
+    users.push({
+        firstName: document.getElementById('first-name').value,
+        lastName: document.getElementById('last-name').value,
+        email: email,
+        password: document.getElementById('password').value,
+        phoneNumber: document.getElementById('phone-number').value
+    });
+    
+    localStorage.setItem('users', JSON.stringify(users));
+});
+
+document.getElementById('signin-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+    let email = document.getElementById('signin-email').value;
+    let password = document.getElementById('signin-password').value;
+    
+    let user = users.find((user) => user.email === email && user.password === password);
+    
+    if (!user) {
+        alert('User does not exist');
+        return;
+    }
+    
+    alert('User logged in');
+});
+
+</script>
+</body>
+</html>

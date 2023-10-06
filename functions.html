@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="displayNum(1)">1</button>
+    <button onclick="displayNum(2)">2</button>
+    <button onclick="displayNum(3)">3</button>
+    <button onclick="displayNum(4)">4</button>
+    <button onclick="displayNum(5)">5</button>
+    <button onclick="displayNum(6)">6</button>
+    <button onclick="displayNum(7)">7</button>
+    <button onclick="displayNum(8)">8</button>
+    <button onclick="displayNum(9)">9</button>
+    <button onclick="displayNum(0)">0</button>
+    <h1 id="anotherH1"></h1>
+    <script>
+ let anotherH1 = document.getElementById("anotherH1")
+ function displayNum(a) {
+    anotherH1.innerHTML += a
+ }
+
+
+
+function addNum() {
+    let sum = 10 + 5;
+    let difference = 10 -5;
+    let product = 10 * 5;
+    let modulos = 10 % 5;
+    let divide = 10 / 5;
+    let arrNum = [sum, difference, product, modulos, divide]
+    return arrNum
+}
+
+let num1 = addNum();
+console.log(num1);
+
+let num2 = 55;
+function checkNum() {
+    if(num2 %2 === 0) {
+        return `${num2} is even`
+    }
+
+    else{
+        return `{num2} is odd`
+    }
+
+}
+
+let parent = document.body;
+let h1 = document.createElement("h1");
+h1.innerHTML = checkNum();
+parent.appendChild(h1);
+
+/*a parameter is a placeholder for something
+that is used to supply a particular value in a 
+function.
+
+an event makes our html and css dynamic.
+event liseners - triggers an event - calls out a function.
+*/
+
+
+
+</script>
+</body>
+</html>

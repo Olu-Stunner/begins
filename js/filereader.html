@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Welcome to my dashboard</h1>
+       
+
+    <input onchange ="pickFile(event)" type="file" id="" placeholder="title"> <br><br>
+    <img id="img" alt="">
+    </main>
+</body>
+<script>
+    function pickFile(ev) {
+        console.log(ev.target.files);
+        let file = ev.target.files[0];
+        let reader = new FileReader()
+        reader.addEventListener("load", (e)=>{
+            let result = e.target.result
+            img.src = result
+            console.log(result);
+        })
+
+    if (file) {
+        reader.readAsDataURL(file)
+    }
+    }
+    let reader = new FileReader()
+</script>
+</html>

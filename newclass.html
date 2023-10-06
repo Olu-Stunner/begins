@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input"><br><br>
+    <input type="text" id="input1"><br><br>
+    <button onclick="myfunction()">Compare </button>
+    <h1 id="h1"></h1>
+</body>
+<script>
+    function myfunction() {
+    let input = document.getElementById("input").value;
+    let input1 = document.getElementById("input1").value;
+    if (input === input1){
+        alert( 'value matches')}
+    else {alert("value does not match")}
+    }
+
+    // Math.random not a whole number 0.4747574595
+    // Math.floor is a whole number 20,1 111
+
+    // Math.random.math.floor
+    // Date
+
+    // let randNum = Math.random()*100;
+    // console.log(randNum);
+
+    let randNum = Math.floor(Math.random()*100);
+    console.log(randNum);
+
+    let date = new Date();
+    console.log(date);
+    console.log(date.getFullYear());
+    console.log(date.getHours());
+    console.log(date.getMinutes());
+    console.log(date.getSeconds());
+
+    let h1 = document.getElementById("h1")
+    let date1 = new Date();
+    h1.innerHTML = `Time: ${date.getHours()}: ${date.getMinutes()}: ${date.getSeconds()}`
+</script>
+</html>

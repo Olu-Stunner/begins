@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shopping List</h1>
+    <input type="text" id="item">
+    <input type="text" id="quantity">
+    <input type="text" id="price">
+    <button onclick="addtolist()">Submit Now</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>s/n</th>
+                <th>item</th>
+                <th>quantity</th>
+                <th>price</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody id="display"></tbody>
+    </table>
+</body>
+<script>
+    let list = [ ]
+    let quantity = document.getElementById("quantity")
+    let item = document.getElementById("item")
+    let price = document.getElementById("price")
+    function addtolist() {
+        let data = {
+            item: item.value,
+            price: price.value,
+        }
+
+    list.push(data)
+    console.log(list);
+
+    display.innerHTML = " "
+    for(let index = 0; index < list.length; index++) {
+        const element = list[index];
+        display.innerHTML += `
+        <tr>
+            <td>${index}</td>
+            <td>${element.item}</td>
+            <td>${element.quantity}</td>
+            <td>${element.price}</td>
+            <td>
+                <button>EDIT</button>
+                <button>DEL</button>
+             </td>
+
+
+        </tr>`
+    }   
+    }
+</script>
+</html>

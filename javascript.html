@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="h1"></h1>
+        <h1 id="2ndH1"></h1>
+</body>
+
+<script>
+
+// Operators in Javascript
+let test1 = 45;
+let test2 = 45;
+
+test1 += test2;
+console.log(test1);
+
+test1 -= test2;
+console.log(test1);
+
+// Arithmetic Operators
+let test3 = 75;
+let test4 = 25;
+console.log(test3 + test4); //Return the sum of test3 and test4
+console.log(test3 - test4);// Return the difference of test3 and test4
+console.log(test3 / test4); //Return the quotient of test3 and test4
+console.log(test3 * test4); //Return the product of test3 and test4
+console.log(test3 % test4); //Return the remainder of test3 and test4
+console.log(test3** test4); //Return the exppnent of test3 and test4
+// test3++; Increments the value of test3 by 1
+// console.log(test3);
+
+
+
+
+// Comparison Operators
+
+// two == compares values and values regardless of the data type
+// three === compares data types with values
+// if i put ! in front of anything it means that value is not equals = to
+// and should return false if atleast one is not true,
+//  while or will return true if one is true.
+
+console.log(test3 == test4);  //Returns true if test3 is equal to test4
+console.log (45 =="45") //Returns true if test3 is equal to test4
+console.log (45 ==="45") //Returns true if test3 is equal to test4
+console.log (45 =="45") //Returns true if test3 is equal to test4
+
+
+
+
+
+
+// Ternary operators
+// we use it when we want some conditions to be met and when they are 
+// met do something, when they are not met.. do something else.
+let test5 = 45;
+let test6 = 55;
+
+test5 === test6 ? console.log("They're equal") : console.log("They're not equal"); 
+// Returns the second operand if the condition(ie the first operand) 
+// is true and the third operand if the condition (ie the first operand ) is false
+
+
+
+// data types in javascript
+// 1. String
+// interpolation is what makes your content dynamic
+let name = "stunna"
+let greetings = "Welcome,"+ name + ",We are happy to see you here";
+let h1 = document.getElementById("h1");
+h1.innerText =greetings;
+
+let name2 = "John";
+let greetings2 =` Welcome ${name2} to javascript.`;
+let anotherH1 = document.getElementById("2ndH1");
+anotherH1.innerHTML = greetings2;
+
+// 2. Numbers
+let age = "SpongeBob";
+let num =456;
+let age2 = Number(age)
+let age3 = parseInt(age);
+console.log(typeof age);
+console.log(typeof age2);
+console.log(typeof age3);
+
+
+// 3. Arrays
+let nameArr = [ "yemi", "Sun", "Stun",]
+console.log(nameArr);
+console.log(nameArr[0]);
+const man = [12, 15, 34, 78];
+console.log(man);
+console.log(man[1]);
+
+
+// 4. Objects
+const obj = {
+    name: "Sam",
+    age: "25",
+    height: "5.9",
+    color: ["black", "Blue", "Red"],
+    weight: "57kg"
+}
+console.log(obj.color[1]);
+console.log(obj.height);
+console.log(obj.height + 10);
+obj.height = 66;
+console.log(obj.height);
+
+
+
+// ass: write ups on naming convention in javascript
+// dom document object model
+</script>
+</html>

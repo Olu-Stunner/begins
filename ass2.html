@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="stunna()"> STUNNA</button>
+    <div id="aa"></div>
+    <div id="aa1"></div>
+    <div id="aa2"></div>
+    <div id="aa3"></div>
+    <div id="aa4"></div>
+    <div id="aa5"></div>
+    
+</body>
+<script>
+    let aa = document.getElementById("aa")
+    let aa1 = document.getElementById("aa1")
+    let aa2 = document.getElementById("aa2")
+    let aa3 = document.getElementById("aa3")
+    let aa4 = document.getElementById("aa4")
+    let aa5 = document.getElementById("aa5")
+
+    function stunna() {
+        let sent = prompt("press");
+        aa.innerHTML = `the string you enter is ${sent}`
+        const lenght = sent.lenght
+        let a = `the lenght of the string is ${lenght}`
+        aa1.innerHTML = a
+        const be = sent.toLowerCase()
+        aa2.innerHTML = be
+        const u = sent.toUpperCase()
+        aa3.innerHTML = u
+        if(sent.toLowerCase().includes ("javascript")) {
+            aa4.innerHTML = `the string you entered contain "javascript"`
+        }else{
+            aa4.innerHTML = `the string you entered does not contain "javascript"`
+        }
+        let index = sent.indexOf('a')
+        aa5.innerHTML = `the index of 'a' in the string is ${index}`;
+    }
+    
+</script>
+</html>
